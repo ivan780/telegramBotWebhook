@@ -1,5 +1,6 @@
 import requests
 import config
+import json
 
 
 class TelegramBot:
@@ -9,6 +10,9 @@ class TelegramBot:
         self.text = None
         self.message_text = None
         self.success = False
+        self.check = False
+        with open('action') as json_file:
+            self.data = json.load(json_file)
 
     def set_webhook(self):
         requests.get(config.TELEGRAM_INIT_WEBHOOK_URL)
@@ -19,9 +23,11 @@ class TelegramBot:
         self.text = message['text']
 
     def action(self):
-        if self.text == '/start':
-            self.message_text = 'Hello, I am a bot and my owner is Ivan Rodriguez Gomez'.format('creador')
-        else:
+        for x in self.data['actions']:
+            if self.text in self.data['actions'][x]:
+                self.message_text = self.data['actions'][x][self.text]
+                self.check = True
+        if self.check:
             self.message_text = 'Hello {}, good morning'.format(self.text)
         success = self.send_message()
         return success
