@@ -12,7 +12,7 @@ class HolaX():
         self.message_text = None
         self.success = False
         self.check = False
-        with open('mdodel/action') as json_file:
+        with open('action.json') as json_file:
             self.data = json.load(json_file)
 
     def set_webhook(self):
