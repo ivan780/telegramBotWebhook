@@ -25,7 +25,7 @@ class TelegramBot:
     def action(self):
         for x in self.data['actions']:
             if self.text in x:
-                self.message_text = self.data['actions'][x][self.text]
+                self.message_text = x[self.text]
                 self.check = True
         if self.check:
             self.message_text = 'Hello {}, good morning'.format(self.text)
