@@ -1,8 +1,8 @@
 from flask import Flask, request, jsonify
-from model.holaXTelegram import TelegramBot
+from model.holaXTelegram import HolaX
 
 app = Flask(__name__)
-bot = TelegramBot()
+bot = HolaX()
 bot.set_webhook()
 
 

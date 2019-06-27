@@ -1,10 +1,10 @@
 import requests
 import json
 from model import config
-from model import telegram
+from model.telegram import TelegramBot
 
 
-class TelegramBot():
+class HolaX():
 
     def __init__(self):
         self.chat_id = None
