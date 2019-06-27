@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from telegramBot import TelegramBot
+from model.holaXTelegram import TelegramBot
 
 app = Flask(__name__)
 bot = TelegramBot()
