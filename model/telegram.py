@@ -1,8 +1,10 @@
-
+import requests
+from model import config
 class TelegramBot:
     def __init__(self):
         self.chat_id = None
-        self.text = None
+        self.text = 2
 
-    def hola(self):
-        return "hola"
+    def setWebhook(self):
+        requests.get()
+

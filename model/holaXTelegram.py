@@ -4,7 +4,7 @@ from model import config
 from model.telegram import TelegramBot
 
 
-class HolaX():
+class HolaX:
 
     def __init__(self):
         self.chat_id = None
@@ -12,7 +12,7 @@ class HolaX():
         self.message_text = None
         self.success = False
         self.check = False
-        with open('action.json') as json_file:
+        with open('model/action.json') as json_file:
             self.data = json.load(json_file)
 
     def set_webhook(self):
