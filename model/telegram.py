@@ -5,7 +5,7 @@ from model import config
 class TelegramBot:
     def __init__(self):
         self.chat_id = None
-        self.text = None
+        self.text = 'hola'
         self.success = False
 
     def set_webhook(self):
