@@ -1,5 +1,5 @@
 import requests
-from model import config
+import config
 
 
 class TelegramBot:

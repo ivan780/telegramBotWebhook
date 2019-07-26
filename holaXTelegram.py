@@ -1,5 +1,5 @@
 import json
-from model.telegram import TelegramBot
+from telegram import TelegramBot
 
 
 class HolaX(TelegramBot):
