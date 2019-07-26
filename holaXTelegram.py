@@ -7,7 +7,7 @@ class HolaX(TelegramBot):
     def __init__(self):
         self.message_text = None
         self.check = False
-        with open('model/action.json') as json_file:
+        with open('json/action.json') as json_file:
             self.data = json.load(json_file)
 
     def action(self):
