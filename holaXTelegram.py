@@ -15,7 +15,7 @@ class HolaX(TelegramBot):
             if self.text in x:
                 self.message_text = x[self.text]
                 self.check = True
-        if self.check:
+        if not self.check:
             self.message_text = 'Hello {}, good morning'.format(self.text)
 
         success = self.send_message(self.message_text)
