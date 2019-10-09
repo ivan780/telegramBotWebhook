@@ -1,5 +1,4 @@
 {"actions": [
   {"/start": "'Hello, I am a bot and my owner is Ivan Rodriguez Gomez'.format('creador')"},
-  {"adios": 0},
-  {"franco": "arriba españa"}
+  {"adios": 0}
 ]}
