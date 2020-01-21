@@ -3,7 +3,6 @@ from telegram import TelegramBot
 
 app = Flask(__name__)
 bot = TelegramBot()
-bot.set_webhook()
 
 
 @app.route('/')
