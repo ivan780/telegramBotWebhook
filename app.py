@@ -1,14 +1,14 @@
 from flask import Flask, request, jsonify
-from holaXTelegram import HolaX
+from telegram import TelegramBot
 
 app = Flask(__name__)
-bot = HolaX()
+bot = TelegramBot()
 bot.set_webhook()
 
 
 @app.route('/')
 def hello():
-    return '<h1>Hello There!</h1>'
+    return '<h1>Hola esta es la pagina de Ivan Rodriguez</h1>'
 
 
 @app.route('/webhook', methods=['POST'])
